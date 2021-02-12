@@ -1,0 +1,413 @@
+/*
+========================================
+=========== Start Main Rules ===========
+========================================
+*/
+@import 'nice-select';
+$mainColor: #00c8c8;
+*{
+    font-family: 'Roboto Mono', monospace !important;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 1em;
+    font-weight: normal;
+
+}
+body{
+    background-color: #333;
+    height: 5000px;
+}
+.nice-select{
+    width: 80px;
+    border: none;
+    background-color: transparent;
+    border-radius: 0;
+    clear: none;
+    padding-left: 5px;
+    height: 100%;
+}
+a{
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+
+}
+a:hover{
+    text-decoration: none;
+    color: white;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+/*
+========================================
+============ End Main Rules ============
+========================================
+*/
+/*
+========================================
+======= Start Custom Bootstrap =========
+========================================
+*/
+.navbar-brand:focus, .navbar-brand:hover{
+    color: $mainColor !important;
+}
+.navbar-toggler{
+    padding: 0 .25rem;
+}
+.navbar-nav .nav-link {
+    padding: 0 8px 0 0 !important;
+    text-transform: capitalize;
+    position: relative;
+    font-weight: inherit;
+    
+}
+.navbar-light .navbar-nav .nav-link{
+    color: #222;
+    font-weight: 600 ;
+}
+.dropdown-toggle::after{
+    position: absolute;
+    top: 20px;
+    left: 3px;
+    bottom: auto;
+    right: auto;
+}
+.dropdown-menu{
+    margin-top: 10px;
+}
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link{
+    color: $mainColor
+
+}
+.navbar-light .navbar-nav .nav-link:focus{
+    color: $mainColor
+}
+/*
+========================================
+========= End Custom Bootstrap =========
+========================================
+*/
+/*
+========================================
+============= Start Header =============
+========================================
+*/
+header{
+    position: relative;
+    overflow: hidden;
+    .background{
+        height: 100%;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .overlay{
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        height: 100%;
+        /* Start Navbar Info */
+        .navbar-info{
+            width: 100%;
+            background-color: #333;
+            color: #999999;
+            text-transform: capitalize;
+            .info{
+                width: 100%;
+                
+                .currency{
+                    float: left;
+                    width: 50%;
+                    height: 50px;
+                    display: flex;
+                    label{
+                        height: 100%;
+                        line-height: 50px;
+                        margin-bottom: 0;
+                        font-weight: 600;
+                    }
+                    .nice-select{
+                        text-transform: uppercase;
+                        height: 100%;
+                        line-height: 50px;
+                        span{
+                            display: block;
+                            font-weight: 600;
+                            font-size: 12px;
+                        }
+                        .list{
+                            -webkit-transition: all .3s ease-in-out;
+                            -moz-transition: all .3s ease-in-out;
+                            -o-transition: all .3s ease-in-out;
+                            transition: all .3s ease-in-out;
+                        }
+                        &::after{
+                            right: 50%;
+                            top: 48%;
+                            height: 6px;
+                            width: 6px;
+                        }
+                        &:hover{
+                            span{
+                                color: white ;
+                                -webkit-transition: all .5s ease-in-out;
+                                -moz-transition: all .5s ease-in-out;
+                                -o-transition: all .5s ease-in-out;
+                                transition: all .5s ease-in-out;
+                            }
+                            &::after{
+                                border-color: white;
+                                -webkit-transition: all .5s ease-in-out;
+                                -moz-transition: all .5s ease-in-out;
+                                -o-transition: all .5s ease-in-out;
+                                transition: all .5s ease-in-out;
+                            }
+                        }
+                    }
+                    
+                }
+                
+                .right-navbar-info{
+                    float: right;
+                    overflow: hidden;
+                    width: 50%;
+                    height: 50px;
+                    ul{
+                        list-style: none;
+                        margin: 0;
+                        padding: 0;
+                        li{
+                            display: inline-block;
+                            height: 100%;
+                            line-height: 50px;
+                            padding: 0 5px;
+                            overflow: hidden;
+                        }
+                        li:last-child{
+                            position: relative;
+                            background-color: $mainColor;
+                            padding: 0 30px 0 15px;
+                            color: white;
+                            cursor: pointer;
+                            text-transform: lowercase;
+                            float: right;
+                            span{padding-left: 15px;}
+                        }
+                        li:last-child::after{
+                            content:'';
+                            border-bottom: 2px solid white;
+                            border-right: 2px solid white;
+                            height: 6px;
+                            width: 6px;
+                            display: block;
+                            position: absolute;
+                            top: 40%;
+                            right: 16px;
+                            transform: rotate(45deg);
+                        }
+                    }
+                }
+
+            }
+        }
+        /* End Navbar Info */
+        /* Start Navbar Menu*/
+        .navbar-menu{
+            clear: both;
+            font-size: .8em;
+            nav{
+                width: 100%;
+                .navbar-brand {
+                    color: rgba(0,0,0,.9);
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    font-size: inherit;
+                    span{
+                        font-weight: bolder;
+                    }
+                }
+                .navbar-collapse{
+                    justify-content: flex-end;
+                    -webkit-transition: all .3s ease-in-out;
+                    -moz-transition: all .3s ease-in-out;
+                    -o-transition: all .3s ease-in-out;
+                    transition: all .3s ease-in-out;
+                    .search{
+                        margin: 0 !important;
+                        border-top-right-radius: 0;
+                        border-bottom-right-radius: 0;
+                        padding: 3px 5px;
+                        height: 28px;
+                        border-right: 0;
+                        width: 60px;
+                        font-size: .8em;
+                    }
+                    .input-group-append{
+                        .btn{
+                            border-top-left-radius: 0;
+                            border-bottom-left-radius: 0;
+                            padding: 3px 5px;
+                            height: 28px;
+                            border-left: 0;
+                        }
+                        .btn-outline-success {
+                            color: #ced4da;
+                            border-color: #ced4da;
+                            &:hover {
+                                color: #fff;
+                                background-color: $mainColor;
+                                border-color: #ced4da;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        /* End Navbar */
+    }
+}
+/*
+========================================
+============== End Header ==============
+========================================
+*/
+
+/*
+========================================
+========== Start Media Query ===========
+========================================
+*/
+
+// @media(max-width: 360px){
+//     .navbar-info{
+//         .info{
+//             .currency{
+//                 label{
+//                     width: 80%;
+//                 }
+//                 .nice-select::after{
+//                     right: 20% !important;
+//                 }
+//             }
+//             .right-navbar-info{
+//                 ul{
+//                     li:last-child{
+//                         padding: 0 15px !important; 
+//                         &::after, span{
+//                             display: none
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+// @media(min-width: 360px) and (max-width: 380px){
+//     .right-navbar-info{
+//         width: 60% !important;
+//     }
+// }
+// @media(min-width: 500px) and (max-width: 568px){
+//     .right-navbar-info{
+//         width: 42% !important;
+//     }
+// }
+@media(min-width:360px) and (max-width: 568px){
+    *{
+        font-size: .98em;
+    }
+    .navbar-brand{
+        font-size: .70em !important;
+        letter-spacing: 0 !important;
+    }
+    .navbar-info{
+        .info{
+            .currency{
+                width: 40% !important;
+                label{
+                    padding-right: 5px;
+                }
+                .nice-select{
+                    width: 65px;
+                    padding: 0;
+                }
+                .nice-select::after{
+                    right: 48% !important;
+                }
+            }
+            .right-navbar-info{
+                width: 60% !important;
+                ul{
+                    height: 100%;
+                    li{
+                        padding: 0 5px 0 0 !important;
+                        font-weight: 600;
+                    }
+                    li:last-child{
+                        padding: 0 30px 0 10px !important;
+                        span{
+                            padding-left: 5px;
+                            display: none;
+                        }
+                        &::after{
+                            right: 8px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media(min-width: 569px){
+    nav{
+        background-color: #F8F8F8;
+    }
+}
+@media(min-width: 569px) and (max-width:767px){
+    .navbar-light .navbar-nav .nav-link{
+        padding-bottom: 3px !important;
+    }
+    .dropdown-toggle::after{
+        top: 10px;
+        left: 80px;
+        right: auto;
+        bottom: auto;
+    }
+    .form-inline{
+        padding: 5px 0 8px;
+    }
+
+}
+@media(min-width: 768px){
+    nav{
+        background-color: transparent
+    }
+    .bg-light{
+        background-color: transparent !important;
+    }
+    .navbar-info{
+        .info{
+            .currency{
+                width: 40%;
+                .nice-select{
+                    span{
+                        font-size: 14px !important;
+                    }
+                }
+            }
+            .right-navbar-info{
+                width: 45%;
+                float: right;
+            }
+        }
+    }
+}
+/* End Media query */
